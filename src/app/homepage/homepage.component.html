@@ -1,17 +1,21 @@
-<header class="header" >
-    Login
-</header>
+<header class="header">Login</header>
 
-<section>
-    <div class="p-fluid">
-        <div class="p-field">
-            <label for="username">Username</label>
-            <input id="username" type="text" pInputText> 
-        </div>
-        <div class="p-field">
-            <label for="password">Password</label>
-            <input id="password" type="text" pInputText>
-        </div>
+<section class="login-form">
+  <div class="p-fluid">
+    <div class="p-field">
+      <div class="p-float-label">
+        <label for="username">Username</label>
+        <input id="username" type="text" pInputText />
+      </div>
     </div>
-    
+    <div class="p-field">
+      <div class="p-float-label">
+        <label for="password">Password</label>
+        <input id="password" type="text" pInputText />
+      </div>
+    </div>
+  </div>
+  <div class="p-field">
+    <button pButton type="button" label="Login" (click)="onLogin()"></button>
+  </div>
 </section>

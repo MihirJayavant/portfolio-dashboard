@@ -1,8 +1,16 @@
 .header {
-    background-color: 'var(--primary-color)';
-    font-size: 20rem;
-    color: white;
-    font-weight: bold;
-    height: 500px;
-    width: 100%;
+  background-color: #9c27b0;
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+}
+
+.login-form {
+  width: 60%;
+  max-width: 300px;
+  min-width: 100px;
+  margin: 20px;
 }
