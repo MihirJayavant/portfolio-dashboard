@@ -18,7 +18,7 @@ export class LumSumCalculator implements ICalculator {
 
     for (let i = 0; i < time; i++) {
       const ans = stats[i].amount * rate * 0.01 + stats[i].amount
-      stats.push({ amount: Number(ans.toFixed(2)), year: stats[i].year })
+      stats.push({ amount: Number(ans.toFixed(2)), year: stats[i].year + 1 })
     }
 
     const len = stats.length

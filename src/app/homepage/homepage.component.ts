@@ -12,6 +12,6 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {}
 
   gotoLumSum() {
-    this.router.navigate(['dashboard', 'lumsum-calculator'])
+    this.router.navigate(['calculator', 'lumsum-calculator'])
   }
 }

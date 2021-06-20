@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { ICalculator, LumSumCalculator } from 'src/core/calculators'
 
 @Component({
   selector: 'app-lum-sum-calculator',
@@ -26,21 +27,21 @@ export class LumSumCalculatorComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick() {
-    const amounts = [this.principal]
-    const years = [new Date().getFullYear()]
+    const calculator: ICalculator = new LumSumCalculator({
+      principal: this.principal,
+      rate: this.rate,
+      time: this.time,
+    })
 
-    for (let i = 1; i <= this.time; i++) {
-      const ans = amounts[i - 1] * this.rate * 0.01 + amounts[i - 1]
-      amounts.push(Number(ans.toFixed(2)))
-      years.push(years[i - 1] + 1)
-    }
+    const result = calculator.calculate()
+
     this.compoundingData = {
-      labels: years,
+      labels: result.stats.map(p => p.year),
       datasets: [
         {
           label: 'Amount',
           borderColor: '#42A5F5',
-          data: amounts,
+          data: result.stats.map(p => p.amount),
           fill: false,
         },
       ],
