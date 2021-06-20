@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-lum-sum-calculator',
+  templateUrl: './lum-sum-calculator.component.html',
+  styleUrls: ['./lum-sum-calculator.component.scss'],
 })
-export class DashboardComponent implements OnInit {
+export class LumSumCalculatorComponent implements OnInit {
   principal = 1000
   time = 10
   rate = 12
