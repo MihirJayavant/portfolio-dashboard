@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<section class="login-form">
+  <div class="p-fluid">
+    <div class="p-field">
+      <div class="">
+        <label for="username">Amount</label>
+        <input id="username" type="number" [(ngModel)]="principal" pInputText />
+      </div>
+    </div>
+    <div class="p-field">
+      <div class="">
+        <label for="password">Time</label>
+        <input id="password" type="number" [(ngModel)]="time" pInputText />
+      </div>
+    </div>
+    <div class="p-field">
+      <div class="">
+        <label for="password">Rate</label>
+        <input id="password" type="number" [(ngModel)]="rate" pInputText />
+      </div>
+    </div>
+  </div>
+  <div class="p-field">
+    <button pButton type="button" label="Calculate" (click)="onClick()"></button>
+  </div>
+</section>
+
+<!-- <div *ngFor="let amt of amount">
+  <div>{{ amt | currency }}</div>
+  <br />
+</div> -->
+
+<div class="card">
+  <h5>Amount</h5>
+  <p-chart type="line" [data]="compoundingData"></p-chart>
+</div>
