@@ -14,4 +14,7 @@ export class HomepageComponent implements OnInit {
   gotoLumSum() {
     this.router.navigate(['calculator', 'lumsum-calculator'])
   }
+  gotoSIP() {
+    this.router.navigate(['calculator', 'sip-calculator'])
+  }
 }

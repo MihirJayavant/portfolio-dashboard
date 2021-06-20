@@ -8,6 +8,7 @@ import { InputTextModule } from 'primeng/inputtext'
 import { LumSumCalculatorComponent } from './lum-sum-calculator/lum-sum-calculator.component'
 import { SIPCalculatorComponent } from './sipcalculator/sipcalculator.component'
 import { PolicyCalculatorComponent } from './policy-calculator/policy-calculator.component'
+import { SelectButtonModule } from 'primeng/selectbutton'
 
 @NgModule({
   declarations: [LumSumCalculatorComponent, SIPCalculatorComponent, PolicyCalculatorComponent],
@@ -17,6 +18,7 @@ import { PolicyCalculatorComponent } from './policy-calculator/policy-calculator
     ButtonModule,
     InputTextModule,
     ChartModule,
+    SelectButtonModule,
     RouterModule.forChild([
       { path: 'lumsum-calculator', component: LumSumCalculatorComponent },
       { path: 'sip-calculator', component: SIPCalculatorComponent },

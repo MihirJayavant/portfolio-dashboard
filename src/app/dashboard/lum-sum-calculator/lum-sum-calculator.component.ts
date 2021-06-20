@@ -6,7 +6,7 @@ import { ICalculator, LumSumCalculator } from 'src/core/calculators'
   templateUrl: './lum-sum-calculator.component.html',
   styleUrls: ['./lum-sum-calculator.component.scss'],
 })
-export class LumSumCalculatorComponent implements OnInit {
+export class LumSumCalculatorComponent {
   principal = 1000
   time = 10
   rate = 12
@@ -21,10 +21,6 @@ export class LumSumCalculatorComponent implements OnInit {
       },
     ],
   }
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   onClick() {
     const calculator: ICalculator = new LumSumCalculator({
